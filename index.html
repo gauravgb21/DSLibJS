@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="red">
+
+        </div>
+        <div class="blue"></div>
+    </div>
+    <script  src="jsbasics.js"></script>
+    <script  src="tree.js"></script>
+    <script>
+        var GlobalGraph = null;
+    </script>
+    <script type="module">
+        import { Graph } from './graph.js';
+        GlobalGraph = Graph;
+    </script>
+    <!-- <script>
+            const inputElement = document.querySelector('#inputId');
+            inputElement.addEventListener('keyup',betterFunction);
+            window.addEventListener('resize',betterApiCallFunction);
+    </script> -->
+</body>
+</html>
