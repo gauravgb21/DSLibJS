@@ -196,6 +196,8 @@ const throttle = (fn,wait) => {
 const betterApiCallFunction = throttle(makeApiCall,300);
 
 
+//Function Currying
+
 const sum = (a) => {
     return function(b){
         if(!b) return a;
@@ -205,4 +207,22 @@ const sum = (a) => {
 
 const sumF = (a) => (b) => !b ? a : sumF( a + b )
 
-console.log("sumF should be ",sumF(3)(4)(6)());
+function useMemo(){
+    const cache = {};
+
+    return function(x){
+        if( x in cache)console.log("Already computed");
+        else{ 
+            cache[x] = 1;
+            console.log("New data ");
+        }
+    }
+}
+
+// const newCache = useMemo();
+
+// newCache(2);
+// newCache(12);
+// newCache(2);
+
+
